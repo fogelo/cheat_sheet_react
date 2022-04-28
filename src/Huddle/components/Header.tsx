@@ -30,7 +30,7 @@ export const Header = () => {
 
                     </div>
 
-                    <Image src='images/illustration-mockups.svg' alt={''}/>
+                    <Image src='assets/images/illustration-mockups.svg' alt={''}/>
 
                 </Flex>
 

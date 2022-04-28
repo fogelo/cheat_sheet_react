@@ -5,6 +5,7 @@ import {GlobalStyles} from './components/styles/Global';
 import 'styled-components';
 import content from './store/content';
 import {Card} from './components/Card';
+import {Footer} from './components/Footer';
 
 declare module 'styled-components' {
     export interface DefaultTheme {
@@ -36,6 +37,7 @@ export const Huddle = () => {
                 <Container>
                     {content.map((item, index) => <Card {...item} key={item.id}/>)}
                 </Container>
+                <Footer/>
             </>
         </ThemeProvider>
     )
