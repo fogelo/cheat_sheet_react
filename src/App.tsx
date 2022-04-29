@@ -33,7 +33,8 @@ const Navbar = () => {
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',
-        fontSize: '1.15rem'
+        fontSize: '1.15rem',
+        marginBottom: '20px',
     }
     return (
         <div style={style}>
