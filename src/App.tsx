@@ -10,7 +10,7 @@ function App() {
     return (
         <div className="App">
             <Navbar/>
-
+            <hr/>
             <Routes>
                 <Route path={'/huddle'} element={<Huddle/>}/>
                 <Route path={'/console'} element={<Console/>}/>
@@ -36,6 +36,7 @@ const Navbar = () => {
             <div style={{marginLeft: '10px'}}><NavLink to={'console'}>console</NavLink></div>
             <div style={{marginLeft: '10px'}}><NavLink to={'huddle'}>huddle</NavLink></div>
             <div style={{marginLeft: '10px'}}><NavLink to={'the-net-ninja'}>the net ninja</NavLink></div>
+
         </div>
     )
 }

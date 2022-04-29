@@ -1,7 +1,7 @@
 import React, {ChangeEvent, FormEvent, useState} from 'react';
 import {
     Button,
-    Container,
+    Container, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup,
     TextField,
     Typography
 } from '@mui/material';
@@ -15,6 +15,7 @@ const Create = () => {
     const [details, setDetails] = useState('')
     const [titleError, setTitleError] = useState(false)
     const [detailsError, setDetailsError] = useState(false)
+    const [category, setCategory] = useState('todos')
 
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -25,7 +26,7 @@ const Create = () => {
         if (!details) {
             setDetailsError(true)
         }
-        console.log(title, details)
+        console.log(title, details, category)
     }
 
     const handleTitleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -72,6 +73,18 @@ const Create = () => {
                            rows={4}
                            error={detailsError}
                 />
+
+                <FormControl>
+                    <FormLabel>Note Category</FormLabel>
+                    <RadioGroup value={category} onChange={(e) => setCategory(e.currentTarget.value)}>
+                        <FormControlLabel value="money" control={<Radio/>} label="Money"/>
+                        <FormControlLabel value="todos" control={<Radio/>} label="Todos"/>
+                        <FormControlLabel value="remainders" control={<Radio/>} label="Remainders"/>
+                        <FormControlLabel value="work" control={<Radio/>} label="Work"/>
+                    </RadioGroup>
+                </FormControl>
+
+
                 <Button type={'submit'}
                         color={'primary'}
                         variant={'contained'}
