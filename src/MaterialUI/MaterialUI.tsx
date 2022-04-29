@@ -1,7 +1,8 @@
 import React from 'react';
 import Create from './components/Create';
-import {purple, red} from '@mui/material/colors';
+import {purple} from '@mui/material/colors';
 import {createTheme, ThemeProvider} from '@mui/material';
+
 
 const MaterialUi = () => {
 

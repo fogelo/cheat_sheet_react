@@ -7,7 +7,8 @@ import {
 } from '@mui/material';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
-
+import {useNavigate} from 'react-router-dom';
+import axios from 'axios';
 
 const Create = () => {
 
@@ -17,6 +18,7 @@ const Create = () => {
     const [detailsError, setDetailsError] = useState(false)
     const [category, setCategory] = useState('todos')
 
+    const navigate = useNavigate()
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -25,6 +27,20 @@ const Create = () => {
         }
         if (!details) {
             setDetailsError(true)
+        }
+        if (title && details) {
+
+            // axios.post('http://localhost:8000/notes', {title, details, category})
+            //     .then(r => {
+            //         debugger
+            //     })
+
+            fetch('http://localhost:8000/notes', {
+                method: 'post',
+                headers: {"content-type": "application/json"},
+                body: JSON.stringify({title, details, category})
+            }).then(r => navigate('/the-net-ninja/notes'))
+
         }
         console.log(title, details, category)
     }

@@ -5,6 +5,7 @@ import {NavLink} from 'react-router-dom';
 import {Routes, Route} from 'react-router-dom';
 import {Huddle} from './StyledComponents/Huddle/Huddle';
 import MaterialUi from './MaterialUI/MaterialUI';
+import Notes from './MaterialUI/components/Notes';
 
 function App() {
     return (
@@ -13,8 +14,11 @@ function App() {
             <hr/>
             <Routes>
                 <Route path={'/huddle'} element={<Huddle/>}/>
+
                 <Route path={'/console'} element={<Console/>}/>
+
                 <Route path={'/the-net-ninja'} element={<MaterialUi/>}/>
+                <Route path={'/the-net-ninja/notes'} element={<Notes/>}/>
             </Routes>
 
         </div>
