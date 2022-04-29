@@ -3,7 +3,9 @@ import {Button, Container, Typography} from '@mui/material';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 
+
 const Create = () => {
+
     return (
         <Container>
             <Typography
@@ -16,10 +18,11 @@ const Create = () => {
             </Typography>
 
             <Button type={'submit'}
-                    color={'secondary'}
+                    color={'primary'}
                     variant={'contained'}
                     size={'small'}
                     endIcon={<SendOutlinedIcon/>}
+
             >
                 send
             </Button>
