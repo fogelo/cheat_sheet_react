@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {Container, Grid, Paper} from '@mui/material';
 
 const Notes = () => {
 
@@ -11,11 +12,15 @@ const Notes = () => {
     }, [])
 
     return (
-        <div>
-            {notes.map((note: any) => (
-                <p key={note.id}>{note.title}</p>
-            ))}
-        </div>
+        <Container>
+            <Grid container>
+                {notes.map((note: any) => (
+                    <Grid item key={note.id} xs={12} md={6} lg={4}>
+                        <Paper >{note.title}</Paper>
+                    </Grid>
+                ))}
+            </Grid>
+        </Container>
     );
 };
 

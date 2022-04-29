@@ -15,3 +15,9 @@ createTheme - есть тема по умолчанию и если тебе н�
 #### `npm install -g json-server`
 - запуск сервера 
 #### `json-server --watch data/db.json --port 8000`
+
+
+#### Grid
+xs - 0, sm - 600, md - 900, lg - 1200, xl - 1536 \
+
+container, item
