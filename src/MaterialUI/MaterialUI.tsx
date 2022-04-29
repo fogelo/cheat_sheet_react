@@ -1,6 +1,6 @@
 import React from 'react';
 import Create from './components/Create';
-import {red} from '@mui/material/colors';
+import {purple, red} from '@mui/material/colors';
 import {createTheme, ThemeProvider} from '@mui/material';
 
 const MaterialUi = () => {
@@ -8,9 +8,9 @@ const MaterialUi = () => {
     const theme = createTheme({
         palette: {
             primary: {
-                main: red[500],
+                main: purple[500],
             },
-            secondary: red,
+            secondary: purple,
         },
     });
     return (
