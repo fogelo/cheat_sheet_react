@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import {StyledComponent} from './StyledComponents/StyledComponent';
+import {Console} from './StyledComponents/Console/Console';
 import {NavLink} from 'react-router-dom';
 import {Routes, Route} from 'react-router-dom';
-import {Huddle} from './Huddle/Huddle';
-
+import {Huddle} from './StyledComponents/Huddle/Huddle';
+import MaterialUi from './MaterialUI/MaterialUI';
 
 function App() {
     return (
@@ -12,8 +12,9 @@ function App() {
             <Navbar/>
 
             <Routes>
-                <Route path={'/styled-component'} element={<StyledComponent/>}/>
                 <Route path={'/huddle'} element={<Huddle/>}/>
+                <Route path={'/console'} element={<Console/>}/>
+                <Route path={'/the-net-ninja'} element={<MaterialUi/>}/>
             </Routes>
 
         </div>
@@ -23,10 +24,18 @@ function App() {
 export default App;
 
 const Navbar = () => {
+
+    const style = {
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        fontSize: '1.15rem'
+    }
     return (
-        <>
-            <NavLink to={'styled-component'} style={{marginLeft: '10px'}}>styled-component</NavLink>
-            <NavLink to={'huddle'} style={{marginLeft: '10px'}}>huddle</NavLink>
-        </>
+        <div style={style}>
+            <div style={{marginLeft: '10px'}}><NavLink to={'console'}>console</NavLink></div>
+            <div style={{marginLeft: '10px'}}><NavLink to={'huddle'}>huddle</NavLink></div>
+            <div style={{marginLeft: '10px'}}><NavLink to={'the-net-ninja'}>the net ninja</NavLink></div>
+        </div>
     )
 }
