@@ -1,5 +1,7 @@
 import React from 'react';
 import {Button, Container, Typography} from '@mui/material';
+import AcUnitIcon from '@mui/icons-material/AcUnit';
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 
 const Create = () => {
     return (
@@ -12,12 +14,20 @@ const Create = () => {
             >
                 Create a New Note
             </Typography>
+
             <Button type={'submit'}
                     color={'secondary'}
                     variant={'contained'}
+                    size={'small'}
+                    endIcon={<SendOutlinedIcon/>}
             >
-                send</Button>
+                send
+            </Button>
 
+            <br/>
+            <AcUnitIcon fontSize={'small'}/>
+            <AcUnitIcon fontSize={'medium'}/>
+            <AcUnitIcon fontSize={'large'}/>
         </Container>
     );
 };
