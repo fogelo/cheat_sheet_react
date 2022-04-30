@@ -63,7 +63,7 @@ const Navbar = () => {
         setOpen(false)
     }
     return (
-        <AppBar position={'static'}>
+        <AppBar position={'sticky'}>
             <StyledToolbar>
                 <Typography variant={'h6'} sx={{display: {xs: 'none', sm: 'block'}}}>LAMA DEV</Typography>
                 <PetsIcon sx={{display: {xs: 'block', sm: 'none'}}}/>

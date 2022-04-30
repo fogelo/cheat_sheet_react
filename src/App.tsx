@@ -11,8 +11,6 @@ import LamaDev from './MaterialUI/LamaDev/LamaDev';
 function App() {
     return (
         <div className="App">
-            <Navbar/>
-            <hr/>
             <Routes>
                 <Route path={'/huddle'} element={<Huddle/>}/>
 
@@ -26,7 +24,8 @@ function App() {
                 <Route path={'/lama-dev'} element={<LamaDev/>}/>
 
             </Routes>
-
+            <hr/>
+            <Navbar/>
         </div>
     );
 }
@@ -48,7 +47,6 @@ const Navbar = () => {
             <div style={{marginLeft: '10px'}}><NavLink to={'huddle'}>huddle</NavLink></div>
             <div style={{marginLeft: '10px'}}><NavLink to={'the-net-ninja'}>the net ninja</NavLink></div>
             <div style={{marginLeft: '10px'}}><NavLink to={'lama-dev'}>lama dev</NavLink></div>
-
         </div>
     )
 }
