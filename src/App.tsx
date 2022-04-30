@@ -4,8 +4,9 @@ import {Console} from './StyledComponents/Console/Console';
 import {NavLink} from 'react-router-dom';
 import {Routes, Route} from 'react-router-dom';
 import {Huddle} from './StyledComponents/Huddle/Huddle';
-import MaterialUi from './MaterialUI/MaterialUI';
-import Notes from './MaterialUI/components/Notes';
+import TheNetNinja from './MaterialUI/TheNetNinja/TheNetNinja';
+import Notes from './MaterialUI/TheNetNinja/components/Notes';
+import LamaDev from './MaterialUI/LamaDev/LamaDev';
 
 function App() {
     return (
@@ -17,8 +18,13 @@ function App() {
 
                 <Route path={'/console'} element={<Console/>}/>
 
-                <Route path={'/the-net-ninja'} element={<MaterialUi/>}/>
+                {/*The Net Ninja*/}
+                <Route path={'/the-net-ninja'} element={<TheNetNinja/>}/>
                 <Route path={'/the-net-ninja/notes'} element={<Notes/>}/>
+
+                {/*Lama Dev*/}
+                <Route path={'/lama-dev'} element={<LamaDev/>}/>
+
             </Routes>
 
         </div>
@@ -41,6 +47,7 @@ const Navbar = () => {
             <div style={{marginLeft: '10px'}}><NavLink to={'console'}>console</NavLink></div>
             <div style={{marginLeft: '10px'}}><NavLink to={'huddle'}>huddle</NavLink></div>
             <div style={{marginLeft: '10px'}}><NavLink to={'the-net-ninja'}>the net ninja</NavLink></div>
+            <div style={{marginLeft: '10px'}}><NavLink to={'lama-dev'}>lama dev</NavLink></div>
 
         </div>
     )

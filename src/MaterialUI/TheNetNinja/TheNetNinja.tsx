@@ -4,7 +4,7 @@ import {purple} from '@mui/material/colors';
 import {createTheme, ThemeProvider} from '@mui/material';
 
 
-const MaterialUi = () => {
+const TheNetNinja = () => {
 
     const theme = createTheme({
         palette: {
@@ -23,4 +23,4 @@ const MaterialUi = () => {
     );
 };
 
-export default MaterialUi;
+export default TheNetNinja;
