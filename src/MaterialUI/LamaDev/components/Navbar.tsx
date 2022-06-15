@@ -56,11 +56,11 @@ const Navbar = () => {
     const [open, setOpen] = useState(false)
 
     const handleOpen = () => {
-        setOpen(true)
+        // setOpen(true)
     }
 
     const handleClose = ()=>{
-        setOpen(false)
+        // setOpen(false)
     }
     return (
         <AppBar position={'sticky'}>

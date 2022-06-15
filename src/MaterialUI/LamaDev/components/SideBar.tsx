@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch} from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import ArticleIcon from '@mui/icons-material/Article';
@@ -7,9 +7,15 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import ModeNightIcon from '@mui/icons-material/ModeNight';
+import {ModeT} from '../LamaDev';
+
+type SideBarPT = {
+    mode: ModeT
+    setMode: (mode: ModeT) => void
+}
 
 
-const SideBar = () => {
+const SideBar: FC<SideBarPT> = (props) => {
     return (
         <Box
             // bgcolor={'skyblue'}
@@ -67,7 +73,8 @@ const SideBar = () => {
                             <ListItemText primary="Profile"/>
                         </ListItemButton>
                     </ListItem>
-                    <ListItem disablePadding>
+                    <ListItem disablePadding
+                              onChange={(e) => props.setMode(props.mode === 'light' ? 'dark' : 'light')}>
                         <ListItemButton>
                             <ListItemIcon>
                                 <ModeNightIcon/>

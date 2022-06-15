@@ -7,10 +7,12 @@ import {Huddle} from './StyledComponents/Huddle/Huddle';
 import TheNetNinja from './MaterialUI/TheNetNinja/TheNetNinja';
 import Notes from './MaterialUI/TheNetNinja/components/Notes';
 import LamaDev from './MaterialUI/LamaDev/LamaDev';
+import {Button} from "@mui/material";
 
 function App() {
     return (
         <div className="App">
+            <Button >add</Button>
             <Routes>
                 <Route path={'/huddle'} element={<Huddle/>}/>
 

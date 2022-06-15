@@ -1,23 +1,39 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SandBox from './components/SandBox';
 import SideBar from './components/SideBar';
 import Feed from './components/Feed';
 import RightBar from './components/RightBar';
-import {Stack} from '@mui/material';
+import {Box, createTheme, Stack, ThemeProvider} from '@mui/material';
 import Navbar from './components/Navbar';
+import Add from './components/Add';
 
-const LamaDev = () => {
+
+export type ModeT = 'light' | 'dark'
+export const LamaDev = () => {
+    const [mode, setMode] = useState<ModeT>('light')
+
+    const theme = createTheme({
+        palette: {
+            mode: mode,
+        }
+    })
+
+
     return (
-        <div>
+        <ThemeProvider theme={theme}>
+            <Box bgcolor={'background.default'} color={'text.primary'}>
             {/*<SandBox/>*/}
             <Navbar/>
             <Stack direction={'row'} spacing={2} justifyContent={'space-between'}>
-                <SideBar/>
+                <SideBar setMode={setMode} mode={mode}/>
                 <Feed/>
                 <RightBar/>
             </Stack>
-        </div>
-    );
-};
+            <Add/>
+        </Box>
+        </ThemeProvider>
+    )
+}
+
 
 export default LamaDev;
