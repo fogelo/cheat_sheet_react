@@ -8,6 +8,7 @@ import TheNetNinja from './MaterialUI/TheNetNinja/TheNetNinja';
 import Notes from './MaterialUI/TheNetNinja/components/Notes';
 import LamaDev from './MaterialUI/LamaDev/LamaDev';
 import {Button} from "@mui/material";
+import My from "./My/My";
 
 function App() {
     return (
@@ -24,6 +25,9 @@ function App() {
 
                 {/*Lama Dev*/}
                 <Route path={'/lama-dev'} element={<LamaDev/>}/>
+
+                {/*My*/}
+                <Route path={'/my'} element={<My/>}/>
 
             </Routes>
             <hr/>
@@ -49,6 +53,7 @@ const Navbar = () => {
             <div style={{marginLeft: '10px'}}><NavLink to={'huddle'}>huddle</NavLink></div>
             <div style={{marginLeft: '10px'}}><NavLink to={'the-net-ninja'}>the net ninja</NavLink></div>
             <div style={{marginLeft: '10px'}}><NavLink to={'lama-dev'}>lama dev</NavLink></div>
+            <div style={{marginLeft: '10px'}}><NavLink to={'my'}>my</NavLink></div>
         </div>
     )
 }
