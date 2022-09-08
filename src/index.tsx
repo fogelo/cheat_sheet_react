@@ -7,7 +7,6 @@ import {createGlobalStyle} from 'styled-components';
 import {BrowserRouter} from 'react-router-dom';
 
 const Global = createGlobalStyle`
-
   :root {
     --color-primary: #235ad1;
   }

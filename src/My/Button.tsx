@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import {theme} from "../colors";
 
-const theme = {
-    primaryColor: "red"
-}
 
 const Button = () => {
     return (
@@ -14,10 +12,11 @@ const Button = () => {
 };
 
 
-
 const StyledButton = styled.div`
-//background-color: ${theme.primaryColor};
-background-color: var(--color-primary);
+    background-color: ${theme.secondaryColor};
+  background-color: var(--color-primary);
+  background-color: red;
+  background-color: var(--);
 `
 
 export default Button;
