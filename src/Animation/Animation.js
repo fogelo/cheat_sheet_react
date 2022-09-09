@@ -1,10 +1,14 @@
 import React from "react";
 import Keyframes from "./Keyframes/Keyframes";
+import LearnJsAnimation from "./LearnJsAnimation/LearnJsAnimation";
 
 const Animation = () => {
     return (
         <div>
-            <Keyframes/>
+            {/*<Keyframes/>*/}
+            {/*<hr/>*/}
+
+            <LearnJsAnimation/>
         </div>
     );
 };

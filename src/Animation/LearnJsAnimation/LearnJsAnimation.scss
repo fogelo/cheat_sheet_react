@@ -1,0 +1,24 @@
+.btn {
+  width: 100px;
+  height: 30px;
+  font-size: 14px;
+}
+
+.transition-div {
+  width: 200px;
+  height: 30px;
+  font-size: 14px;
+  background-color: green;
+
+  transition-property: background-color; // теперь любое изменение этого свойства будет переходить в течение 3s (даже изменеине из js)
+  transition-duration: 3s;
+  transition-timing-function: linear; //временная функция перехода, определяет как процесс перехода будет распределен во времение (с ускорение с замедлением и тд)
+  transition-delay: 500ms; //задержка начала перехода
+
+  //универсальное свойство transition
+  transition: background-color 3s linear 500ms;
+}
+
+.transited {
+  background-color: purple;
+}
