@@ -11,8 +11,18 @@
   animation-timing-function: linear; // функция определяющая как будет анимироваться переход (линейно, с замедлением, с ускорением)
   animation-iteration-count: 2; // число повторов анимации
   animation-direction: alternate-reverse; //направление анимации
+  animation-play-state: running; // позволяет запускать или останавливать проигрывание анимации
+  animation-delay: 500ms; //задержка начала анимации
+  animation-fill-mode: forwards; //определяет какие свойства остануться на элемента в конце анимации (исходные или конечные например)
+
+  // универсльаное свойство animation, содеражещее все свойства
+  animation: circle-move 4s linear 2 alternate-reverse running 500ms forwards;
 }
 
+
+.circle:hover {
+  animation-play-state: paused; // ставим анимацию на паузу при наведении
+}
 
 @keyframes circle-move {
   0% {
